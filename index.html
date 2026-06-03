@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Écrin Doré – Boutique Cadeaux</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- BARRE DE RÉASSURANCE SUPÉRIEURE -->
+<div class="top-reassurance">
+  <div class="reassurance-track">
+    <span>🚚 Livraison express 24–48h</span>
+    <span class="dot">·</span>
+    <span>🎁 Emballage cadeau offert dès 5 000 DA</span>
+    <span class="dot">·</span>
+    <span>✨ Livraison gratuite dès 5 000 DA d'achat</span>
+    <span class="dot">·</span>
+    <span>💌 Carte message personnalisée incluse</span>
+    <span class="dot">·</span>
+    <span>🔄 Satisfait ou remboursé sous 14 jours</span>
+    <span class="dot">·</span>
+    <span>🚚 Livraison express 24–48h</span>
+    <span class="dot">·</span>
+    <span>🎁 Emballage cadeau offert dès 5 000 DA</span>
+    <span class="dot">·</span>
+    <span>✨ Livraison gratuite dès 5 000 DA d'achat</span>
+    <span>🚚 Livraison express 24–48h</span>
+    <span class="dot">·</span>
+  </div>
+</div>
+
+<!-- HEADER / NAVIGATION -->
+<header class="header" id="mainHeader">
+  <div class="header-inner">
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">L'Écrin <em>&amp; Doré</em></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#occasions">Par Occasion</a>
+      <a href="#bestsellers">Nos Sélections</a>
+      <a href="#packs">Packs Prêts à Offrir</a>
+      <a href="#quiz">Quiz Cadeau</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn search-btn" id="searchToggle" aria-label="Rechercher">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="icon-btn wishlist-btn" id="wishlistToggle" aria-label="Favoris">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" id="heartIcon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="wishlist-count" id="wishlistCount">0</span>
+      </button>
+      <button class="icon-btn cart-btn" id="cartToggle" aria-label="Panier">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- BARRE DE RECHERCHE (SLIDE-DOWN) -->
+<div class="search-bar-wrap" id="searchBarWrap">
+  <div class="search-bar-inner">
+    <div class="search-input-wrap">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Rechercher un cadeau, une occasion…" autocomplete="off" />
+      <button class="search-clear" id="searchClear">✕</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<div class="search-overlay" id="searchOverlay"></div>
+
+<!-- Mobile Nav Drawer -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+  <a href="#occasions" class="mobile-nav-link">Par Occasion</a>
+  <a href="#bestsellers" class="mobile-nav-link">Nos Sélections</a>
+  <a href="#packs" class="mobile-nav-link">Packs Prêts à Offrir</a>
+  <a href="#quiz" class="mobile-nav-link">Quiz Cadeau</a>
+  <a href="#avis" class="mobile-nav-link">Témoignages</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-overlay"></div>
+    <div class="float-el fe1">🎀</div>
+    <div class="float-el fe2">✨</div>
+    <div class="float-el fe3">🌸</div>
+    <div class="float-el fe4">⭐</div>
+    <div class="float-el fe5">🎁</div>
+  </div>
+  <div class="hero-content fade-in-up">
+    <p class="hero-eyebrow">✦ Livraison partout en Algérie ✦</p>
+    <h1 class="hero-title">
+      cadeaux soigneusement emballés<br/>
+      <em>livrés chez vous</em>
+    </h1>
+    <p class="hero-sub">Chaque cadeau raconte une histoire. Laissez-nous écrire la vôtre avec élégance.</p>
+    <div class="hero-cta-group">
+      <a href="#bestsellers" class="btn-primary">Trouver mon cadeau ✦</a>
+      <a href="#quiz" class="btn-ghost">Quiz cadeau →</a>
+    </div>
+    <div class="urgency-bar" id="urgencyBar">
+      <span class="urgency-icon">⚡</span>
+      <span>Commandez avant <strong id="urgencyTime">2h14min</strong> pour une expédition <strong>aujourd'hui !</strong></span>
+    </div>
+  </div>
+  <div class="hero-badge-1">🎁 Emballage<br/>Premium</div>
+  <div class="hero-badge-2">⭐ 4.9/5<br/>+1200 avis</div>
+</section>
+
+<!-- SECTION PAR OCCASION -->
+<section class="occasions-section" id="occasions">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <p class="section-eyebrow">✦ Chaque moment mérite un cadeau ✦</p>
+      <h2 class="section-title">Quel est l'heureux événement !</h2>
+      <p class="section-sub">Cliquez sur une occasion pour découvrir une sélection pensée rien que pour elle.</p>
+    </div>
+    <div class="occasions-grid fade-in-up">
+      <button class="occasion-card" data-occasion="all">
+        <div class="occ-icon"><img src="images/tous.png" alt="tous occasions"></div>
+        <span>Tous</span>
+      </button>
+      <button class="occasion-card" data-occasion="anniversaire">
+        <div class="occ-icon"><img src="images/anniversaire.png" alt="Anniversaire"></div>
+        <span>Anniversaire</span>
+      </button>
+      <button class="occasion-card" data-occasion="mariage">
+        <div class="occ-icon"><img src="images/mariage.png" alt="Mariage"></div>
+        <span>Mariage</span>
+      </button>
+      <button class="occasion-card" data-occasion="saint-valentin">
+        <div class="occ-icon"><img src="images/valentin.png" alt="Saint-Valentin"></div>
+        <span>Saint-Valentin</span>
+      </button>
+      <button class="occasion-card" data-occasion="naissance">
+        <div class="occ-icon"><img src="images/naissance.png" alt="Naissance"></div>
+        <span>Naissance</span>
+      </button>
+      <button class="occasion-card" data-occasion="fete-des-meres">
+        <div class="occ-icon"><img src="images/mere.png" alt="Fête des Mères"></div>
+        <span>Fête des Mères</span>
+      </button>
+      <button class="occasion-card" data-occasion="ramadan">
+        <div class="occ-icon"><img src="images/ramadan.png" alt="Ramadan"></div>
+        <span>Ramadan</span>
+      </button>
+      <button class="occasion-card" data-occasion="reussite">
+        <div class="occ-icon"><img src="images/reussite.png" alt="Réussite"></div>
+        <span>Réussite</span>
+      </button>
+      <button class="occasion-card" data-occasion="noel">
+        <div class="occ-icon"><img src="images/noel.png" alt="Noël"></div>
+        <span>Noël</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- MEILLEURES VENTES / GRILLE PRODUITS -->
+<section class="bestsellers-section" id="bestsellers">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <p class="section-eyebrow">✦ Nos coups de cœur ✦</p>
+      <h2 class="section-title" id="productsTitle">Nos Meilleures Ventes</h2>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="load-more-wrap fade-in-up">
+      <button class="btn-outline" id="loadMoreBtn">Voir tous nos cadeaux ✦</button>
+    </div>
+  </div>
+</section>
+
+<!-- PACKS PRÊTS À OFFRIR -->
+<section class="packs-section" id="packs">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <p class="section-eyebrow">✦ La solution ultime ✦</p>
+      <h2 class="section-title">Packs Prêts à Offrir</h2>
+      <p class="section-sub">Tout est pensé pour vous — emballage premium, carte et livraison inclus.</p>
+    </div>
+    <div class="packs-grid" id="packsGrid"></div>
+  </div>
+</section>
+
+<!-- QUIZ CADEAU -->
+<section class="quiz-section" id="quiz">
+  <div class="container">
+    <div class="quiz-wrapper fade-in-up">
+      <div class="quiz-deco">✦</div>
+      <p class="section-eyebrow">✦ En panne d'inspiration ! ✦</p>
+      <h2 class="quiz-title">Le Quiz Cadeau Magique</h2>
+      <p class="quiz-sub">Répondez à 3 petites questions et nous vous trouvons le cadeau parfait !</p>
+      <div class="quiz-steps" id="quizSteps">
+        <div class="quiz-step active" id="quizStep1">
+          <h3 class="quiz-q">1 · Pour qui est ce cadeau :</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-key="who" data-val="homme">👨  homme</button>
+            <button class="quiz-opt" data-key="who" data-val="femme">👩  femme</button>
+            <button class="quiz-opt" data-key="who" data-val="enfant">👧  enfant</button>
+            <button class="quiz-opt" data-key="who" data-val="couple">👫  couple</button>
+          </div>
+        </div>
+        <div class="quiz-step" id="quizStep2">
+          <h3 class="quiz-q">2 · Quelle est l'occasion !</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-key="occasion" data-val="anniversaire">🎂 Anniversaire</button>
+            <button class="quiz-opt" data-key="occasion" data-val="mariage">💍 Mariage</button>
+            <button class="quiz-opt" data-key="occasion" data-val="saint-valentin">🌹 Saint-Valentin</button>
+            <button class="quiz-opt" data-key="occasion" data-val="naissance">👶 Naissance</button>
+            <button class="quiz-opt" data-key="occasion" data-val="reussite">🎓 Réussite</button>
+            <button class="quiz-opt" data-key="occasion" data-val="noel">🎄 Noël</button>
+          </div>
+        </div>
+        <div class="quiz-step" id="quizStep3">
+          <h3 class="quiz-q">3 · Quel est votre budget ?</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-key="budget" data-val="low">💛 Moins de 3 000 DA</button>
+            <button class="quiz-opt" data-key="budget" data-val="mid">🥈 3 000 – 8 000 DA</button>
+            <button class="quiz-opt" data-key="budget" data-val="high">🥇 8 000 – 20 000 DA</button>
+            <button class="quiz-opt" data-key="budget" data-val="luxury">💎 Sans limite !</button>
+          </div>
+        </div>
+        <div class="quiz-step" id="quizResults">
+          <h3 class="quiz-q">✨ Nos 4 suggestions pour vous !</h3>
+          <div class="quiz-results-grid" id="quizResultsGrid"></div>
+          <button class="btn-ghost" id="quizRestart" style="margin-top:2rem;">Recommencer le quiz →</button>
+        </div>
+      </div>
+      <div class="quiz-progress" id="quizProgress">
+        <div class="quiz-prog-dot active" data-step="1"></div>
+        <div class="quiz-prog-dot" data-step="2"></div>
+        <div class="quiz-prog-dot" data-step="3"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS CLIENTS -->
+<section class="reviews-section" id="avis">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <p class="section-eyebrow">✦ Ils l'ont offert, ils ont adoré ✦</p>
+      <h2 class="section-title">Ce que disent nos clients</h2>
+    </div>
+    <div class="reviews-grid fade-in-up">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">« J'ai commandé un coffret parfum pour ma mère et elle a fondu en larmes tellement c'était beau. L'emballage est d'une élégance folle. »</p>
+        <div class="review-author"><span class="review-avatar">S</span><div><strong>Sarah M.</strong><small>Alger</small></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">« La montre est arrivée dans une boîte magnétique avec un ruban doré. Mon mari était bluffé. Livraison en 24h comme promis ! »</p>
+        <div class="review-author"><span class="review-avatar">L</span><div><strong>Leila K.</strong><small>Oran</small></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">« Le quiz cadeau m'a sauvé la mise ! Je ne savais pas quoi offrir à ma femme pour notre anniversaire. La suggestion était parfaite. »</p>
+        <div class="review-author"><span class="review-avatar">K</span><div><strong>Karim B.</strong><small>Constantine</small></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">« La carte générée automatiquement était tellement poétique que mes amis ont cru que je l'avais écrite moi-même. Merci ! »</p>
+        <div class="review-author"><span class="review-avatar">A</span><div><strong>Amira D.</strong><small>Annaba</small></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">« J'ai envoyé le cadeau directement chez ma sœur à Tizi Ouzou. Elle a reçu une belle surprise sans voir le prix. Service impeccable. »</p>
+        <div class="review-author"><span class="review-avatar">N</span><div><strong>Nassim R.</strong><small>Sétif</small></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">« L'option rappel anniversaire est géniale ! J'ai reçu un email 2 semaines avant l'anniversaire de ma fille. On pense vraiment à tout. »</p>
+        <div class="review-author"><span class="review-avatar">F</span><div><strong>Fatima Z.</strong><small>Blida</small></div></div>
+      </div>
+    </div>
+    <div class="trust-badges fade-in-up">
+      <div class="trust-badge"><div class="tb-icon">🔒</div><span>Paiement<br/>Sécurisé</span></div>
+      <div class="trust-badge"><div class="tb-icon">↩️</div><span>Retour<br/>14 jours</span></div>
+      <div class="trust-badge"><div class="tb-icon">🚚</div><span>Livraison<br/>Express</span></div>
+      <div class="trust-badge"><div class="tb-icon">💎</div><span>Qualité<br/>Premium</span></div>
+      <div class="trust-badge"><div class="tb-icon">💌</div><span>Carte<br/>Offerte</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="logo logo-footer">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">L'Écrin <em>&amp; Doré</em></span>
+      </a>
+      <p>Nous mettons du bonheur dans chaque boîte. Chaque cadeau est une déclaration d'amour.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="Facebook">💙</a>
+        <a href="#" aria-label="TikTok">🎵</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Boutique</h4>
+      <a href="#bestsellers">Meilleures ventes</a>
+      <a href="#occasions">Occasion</a>
+      <a href="#packs">Packs cadeaux</a>
+      <a href="#quiz">Quiz cadeau</a>
+    </div>
+    <div class="footer-links">
+      <h4>Aide & Infos</h4>
+      <a href="#" id="returnPolicyLink">Politique de retour</a>
+      <a href="#">Suivi de commande</a>
+      <a href="#">FAQ</a>
+      <a href="#">Contactez-nous</a>
+    </div>
+    <div class="footer-links">
+      <h4>Livraison</h4>
+      <a href="#">Standard – 600 DA</a>
+      <a href="#">Express 24–48h – 500 DA</a>
+      <a href="#">Point Relais – 1 200 DA</a>
+      <a href="#">Gratuit dès 5 000 DA</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Cadeaux &amp; Merveilles · Algérie · Tous droits réservés</p>
+    <div class="payment-icons">
+      <span class="pay-icon">💳 CIB</span>
+      <span class="pay-icon">🏦 Virement</span>
+      <span class="pay-icon">💵 Cash</span>
+    </div>
+  </div>
+</footer>
+
+<!-- PANIER LATÉRAL (SLIDE-IN) -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h3>🛍️ Mon Panier</h3>
+    <button class="cart-close" id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">
+      <div style="font-size:3rem;">🎁</div>
+      <p>Votre panier est vide pour l'instant…</p>
+      <p style="font-size:.85rem;opacity:.6;">Des cadeaux merveilleux vous attendent !</p>
+    </div>
+  </div>
+  <div class="cart-upsell" id="cartUpsell" style="display:none;">
+    <p class="upsell-title">✨ Le compliment parfait</p>
+    <div class="upsell-products" id="upsellProducts"></div>
+  </div>
+  <div class="cart-delivery" id="cartDelivery" style="display:none;">
+    <h4>🚚 Options de livraison</h4>
+    <label class="delivery-opt">
+      <input type="radio" name="delivery" value="standard" checked />
+      <div class="delivery-info">
+        <strong>Standard (2–3 jours)</strong>
+        <span>600 DA · Gratuit dès 5 000 DA</span>
+      </div>
+    </label>
+    <label class="delivery-opt">
+      <input type="radio" name="delivery" value="express" />
+      <div class="delivery-info">
+        <strong>Express 24–48h ⚡</strong>
+        <span>500 DA</span>
+      </div>
+    </label>
+    <label class="delivery-opt">
+      <input type="radio" name="delivery" value="relay">
+      <div class="delivery-info">
+        <strong>Point Relais (3–5 jours)</strong>
+        <span>1 200 DA</span>
+      </div>
+    </label>
+    <label class="delivery-opt send-to-recipient">
+      <input type="checkbox" id="sendToRecipient" />
+      <div class="delivery-info">
+        <strong>📦 Envoyer directement au destinataire</strong>
+        <span>Entrez l'adresse de votre proche (facture sans prix dans le colis)</span>
+      </div>
+    </label>
+    <div class="recipient-address" id="recipientAddress" style="display:none;">
+      <input type="text" placeholder="Prénom et nom du destinataire" class="addr-input" />
+      <input type="text" placeholder="Adresse complète" class="addr-input" />
+      <input type="text" placeholder="Ville / Wilaya" class="addr-input" />
+    </div>
+  </div>
+  <!-- FOOTER TOUJOURS VISIBLE -->
+  <div class="cart-footer" id="cartFooter">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span class="cart-total-amount" id="cartTotalAmount">0 DA</span>
+    </div>
+    <button class="btn-primary full-width" id="checkoutBtn">Commander maintenant ✦</button>
+    <p class="cart-secure-note">🔒 Paiement 100% sécurisé</p>
+  </div>
+</aside>
+
+<!-- PANEL FAVORIS (SLIDE-IN) -->
+<div class="wishlist-overlay" id="wishlistOverlay"></div>
+<aside class="wishlist-panel" id="wishlistPanel">
+  <div class="cart-header">
+    <h3>❤️ Mes Favoris</h3>
+    <button class="cart-close" id="wishlistClose">✕</button>
+  </div>
+  <div class="wishlist-items" id="wishlistItems">
+    <div class="cart-empty" id="wishlistEmpty">
+      <div style="font-size:3rem;">💝</div>
+      <p>Aucun favori pour l'instant…</p>
+      <p style="font-size:.85rem;opacity:.6;">Cliquez sur le ♡ d'un produit pour l'ajouter !</p>
+    </div>
+  </div>
+</aside>
+
+<!-- MODAL PRODUIT (DÉTAIL) -->
+<div class="modal-overlay" id="productModalOverlay"></div>
+<div class="product-modal" id="productModal">
+  <button class="modal-close" id="modalClose">✕</button>
+  <div class="modal-inner">
+    <div class="modal-gallery">
+      <div class="modal-main-img-wrap" style="position: relative;">
+        <button id="modalPrevBtn" class="slider-arrow-btn" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; font-size: 20px; padding: 10px 14px; border-radius: 50%; cursor: pointer; z-index: 10;">&#10094;</button>
+        <img src="" alt="" id="modalMainImg" />
+        <button class="zoom-btn" id="zoomBtn">🔍</button>
+        <button id="modalNextBtn" class="slider-arrow-btn" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; font-size: 20px; padding: 10px 14px; border-radius: 50%; cursor: pointer; z-index: 10;">&#10095;</button>
+      </div>
+      <!-- Thumbnails cachés — navigation uniquement via flèches -->
+      <div class="modal-thumbs" id="modalThumbs" style="display:none;"></div>
+    </div>
+    <div class="modal-info">
+      <p class="modal-occasion-tag" id="modalTag"></p>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-stars" id="modalStars">★★★★★ <span>(48 avis)</span></div>
+      <p class="modal-price" id="modalPrice"></p>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-variants" id="modalVariants"></div>
+      <div class="modal-actions">
+        <div class="qty-control">
+          <button class="qty-btn" id="qtyMinus">−</button>
+          <span id="qtyValue">1</span>
+          <button class="qty-btn" id="qtyPlus">+</button>
+        </div>
+        <button class="btn-primary" id="modalAddToCart">Ajouter au panier ✦</button>
+      </div>
+      <div class="modal-actions" style="margin-top:.8rem;">
+        <button class="btn-wishlist-modal" id="modalWishlistBtn">♡ Ajouter aux favoris</button>
+      </div>
+      <div class="modal-reassurance">
+        <span>🚚 Livraison en 24–48h</span>
+        <span>🎁 Emballage premium</span>
+        <span>↩️ Retour 14 jours</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GÉNÉRATEUR DE CARTE MESSAGE -->
+<div class="modal-overlay" id="cardGenOverlay"></div>
+<div class="card-gen-modal" id="cardGenModal">
+  <button class="modal-close" id="cardGenClose">✕</button>
+  <div class="card-gen-inner">
+    <div class="card-gen-header">
+      <span style="font-size:2rem;">💌</span>
+      <h3>Votre carte message personnalisée</h3>
+      <p>Un petit mot qui fait toute la différence…</p>
+    </div>
+    <div class="card-gen-body">
+      <div class="card-mode-toggle">
+        <button class="card-mode-btn active" id="cardModeAuto">✨ Générer automatiquement</button>
+        <button class="card-mode-btn" id="cardModeManual">✏️ Écrire moi-même</button>
+      </div>
+      <div id="cardAutoMode">
+        <p style="font-size:.9rem;opacity:.7;margin-bottom:1rem;">Choisissez un ton :</p>
+        <div class="tone-options">
+          <button class="tone-btn active" data-tone="romantique">🌹 Romantique</button>
+          <button class="tone-btn" data-tone="poetique">🌙 Poétique</button>
+          <button class="tone-btn" data-tone="drole">😄 Drôle</button>
+          <button class="tone-btn" data-tone="chaleureux">🤗 Chaleureux</button>
+          <button class="tone-btn" data-tone="solennel">✨ Solennel</button>
+        </div>
+        <button class="btn-primary" id="generateCardBtn" style="margin-top:1.5rem;width:100%;">Générer ma carte ✨</button>
+        <div class="generated-card" id="generatedCard" style="display:none;">
+          <div class="card-preview" id="cardPreview"></div>
+          <button class="btn-ghost" id="regenerateBtn" style="margin-top:.75rem;font-size:.85rem;">↺ Régénérer</button>
+        </div>
+      </div>
+      <div id="cardManualMode" style="display:none;">
+        <textarea class="card-textarea" id="cardTextarea" placeholder="Écrivez votre message ici… Chaque mot compte 💛" rows="5"></textarea>
+      </div>
+      <div class="card-actions">
+        <button class="btn-primary" id="saveCardBtn">Valider ma carte ✦</button>
+        <button class="btn-ghost" id="skipCardBtn">Continuer sans carte →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkoutOverlay"></div>
+<div class="checkout-modal" id="checkoutModal">
+  <button class="modal-close" id="checkoutClose">✕</button>
+  <div class="checkout-inner">
+    <h2 class="checkout-title">🛍️ Finaliser ma commande</h2>
+    <div class="checkout-grid">
+      <div class="checkout-form-col">
+        <h4>Vos informations</h4>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Prénom *</label>
+            <input type="text" id="checkoutPrenom" placeholder="Votre prénom" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label>Nom *</label>
+            <input type="text" id="checkoutNom" placeholder="Votre nom" class="form-input" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email * <small>(votre facture sera envoyée ici)</small></label>
+          <input type="email" id="checkoutEmail" placeholder="votre@email.com" class="form-input" />
+          <span class="field-error" id="emailError" style="display:none;">⚠️ Veuillez entrer un email valide (ex: nom@domaine.com)</span>
+        </div>
+        <div class="form-group">
+          <label>Téléphone *</label>
+          <input type="tel" id="checkoutTel" placeholder="0X XX XX XX XX" class="form-input" />
+          <span class="field-error" id="telError" style="display:none;">⚠️ Veuillez entrer un numéro valide (10 chiffres, ex: 0551234567)</span>
+        </div>
+        <div class="form-group">
+          <label>Adresse de livraison *</label>
+          <input type="text" id="checkoutAdresse" placeholder="Rue, numéro, appartement" class="form-input" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ville *</label>
+            <input type="text" id="checkoutVille" placeholder="Votre ville" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label>Wilaya *</label>
+            <select id="checkoutWilaya" class="form-input">
+              <option value="">Choisir...</option>
+              <option>Alger</option><option>Oran</option><option>Constantine</option>
+              <option>Annaba</option><option>Blida</option><option>Sétif</option>
+              <option>Tizi Ouzou</option><option>Batna</option><option>Béjaïa</option>
+              <option>Autre wilaya</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group birthday-reminder-opt">
+          <label class="checkbox-label">
+            <input type="checkbox" id="birthdayReminderCheck" />
+            <span>🎂 Me rappeler les anniversaires de mes proches (email 2 semaines avant)</span>
+          </label>
+        </div>
+        <div id="birthdayDates" style="display:none;">
+          <div class="birthday-entry">
+            <input type="text" placeholder="Prénom du proche" class="form-input bday-input" />
+            <input type="date" class="form-input bday-input" />
+          </div>
+          <div class="birthday-entry">
+            <input type="text" placeholder="Prénom du proche" class="form-input bday-input" />
+            <input type="date" class="form-input bday-input" />
+          </div>
+          <div class="birthday-entry">
+            <input type="text" placeholder="Prénom du proche" class="form-input bday-input" />
+            <input type="date" class="form-input bday-input" />
+          </div>
+        </div>
+        <h4 style="margin-top:1.5rem;">Paiement</h4>
+        <div class="payment-methods">
+          <label class="pay-method">
+            <input type="radio" name="payment" value="cash" checked />
+            <span>💵 Paiement à la livraison</span>
+          </label>
+          <label class="pay-method">
+            <input type="radio" name="payment" value="cib" />
+            <span>💳 CIB / EDAHABIA</span>
+          </label>
+          <label class="pay-method">
+            <input type="radio" name="payment" value="virement" />
+            <span>🏦 Virement bancaire</span>
+          </label>
+        </div>
+        <div class="secure-logos">
+          <span>🔒 SSL</span><span>🛡️ Sécurisé</span><span>✅ Vérifié</span>
+        </div>
+      </div>
+      <div class="checkout-summary-col">
+        <h4>Récapitulatif</h4>
+        <div class="checkout-items" id="checkoutItems"></div>
+        <div class="checkout-totals">
+          <div class="total-row"><span>Sous-total</span><span id="checkoutSubtotal">0 DA</span></div>
+          <div class="total-row"><span>Livraison</span><span id="checkoutDelivery">600 DA</span></div>
+          <div class="total-row total-final"><span>Total</span><span id="checkoutTotal">0 DA</span></div>
+        </div>
+        <div class="card-summary" id="checkoutCardSummary" style="display:none;">
+          <p class="card-sum-label">💌 Votre carte message :</p>
+          <p class="card-sum-text" id="checkoutCardText"></p>
+        </div>
+        <button class="btn-primary full-width" id="placeOrderBtn" style="margin-top:1.5rem;">
+          ✦ Confirmer ma commande
+        </button>
+        <p class="guarantee-note">🔄 Satisfait ou remboursé sous 14 jours · Facture sans prix dans le colis</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ORDER SUCCESS MODAL -->
+<div class="modal-overlay" id="successOverlay"></div>
+<div class="success-modal" id="successModal">
+  <div class="success-inner">
+    <div class="success-animation">🎊</div>
+    <h2>Votre commande est confirmée !</h2>
+    <p>Merci d'avoir partagé du bonheur ✨<br/>Un email de confirmation a été envoyé à votre adresse.</p>
+    <div class="order-steps">
+      <div class="order-step done">✅ Commande validée</div>
+      <div class="order-step">📦 En préparation</div>
+      <div class="order-step">🚚 En chemin</div>
+      <div class="order-step">🎁 Livré !</div>
+    </div>
+    <button class="btn-primary" id="successClose" style="margin-top:2rem;">Continuer les achats ✦</button>
+  </div>
+</div>
+
+<!-- RETURN POLICY MODAL -->
+<div class="modal-overlay" id="returnOverlay"></div>
+<div class="return-modal" id="returnModal">
+  <button class="modal-close" id="returnClose">✕</button>
+  <div style="padding:2.5rem;">
+    <h2 style="font-family:'Cormorant Garamond',serif;margin-bottom:1rem;">↩️ Politique de Retour</h2>
+    <p style="margin-bottom:.75rem;"><strong>Satisfait ou remboursé sous 14 jours.</strong></p>
+    <p>Si pour quelque raison que ce soit vous n'êtes pas satisfait de votre achat, vous pouvez nous retourner le produit dans les 14 jours suivant la réception. Le remboursement sera effectué intégralement sous 3–5 jours ouvrés.</p>
+    <p style="margin-top:.75rem;">Pour initier un retour, contactez-nous par email avec votre numéro de commande. Nous gérons tout avec le sourire !</p>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+<!-- Image Zoom Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <img src="" alt="" id="lightboxImg" />
+</div>
+
+<script src="Script.js"></script>
+</body>
+</html>
